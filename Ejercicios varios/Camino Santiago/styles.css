@@ -1,0 +1,245 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+
+*,
+*::after,
+*::before {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-fondo-figure: #000000;
+  --color-enlaces: #dc7c1d;
+  --color-head-foot-hover: #ffffff;
+  --bgcolor-main: #212121;
+  --bgColor-mod_camino: rgba(0, 0, 0, 0.76);
+  --figure-azul: #123851;
+  --figure-rojo: #581a14;
+  --figure-amarillo: #7f5006;
+  --figure-verde: #083616;
+  --figure-violeta: #2b0836;
+  --fondo-h2-azul: #0a212f;
+  --fondo-h2-rojo: #36100c;
+  --fondo-h2-amarillo: #583804;
+}
+
+/*      ESTILO ENLACES      */
+
+a {
+  text-decoration: none;
+  size: 1.1vw;
+  color: var(--color-enlaces);
+}
+
+/*      PAGINA PRINCIPAL        */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./imagenes/Catedral_de_santiago.jpg");
+}
+
+/*      CABECERA        */
+
+header {
+  display: flex;
+  align-content: center;
+  justify-content: stretch;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 3%;
+  padding-top: 1%;
+  padding-left: 2%;
+  background-color: rgb(220, 125, 29);
+  color: var(--color-head-foot-hover);
+  opacity: 0.6;
+}
+
+header h1 {
+  font-size: 3vw;
+  align-self: center;
+}
+
+/*      MAIN        */
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 15px   ;
+  background-color: var(--bgcolor-main);
+}
+
+figure.figuraruta {
+  font-family: "Raleway, Arial, sans-serif";
+  position: relative;
+  margin: 10px;
+  max-width: 310px;
+  max-height: 220px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.figuraruta * {
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
+}
+
+figure.figuraruta img {
+  max-width: 100%;
+  position: relative;
+  opacity: 0.4;
+}
+
+figure.figuraruta figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  
+}
+
+figure.figuraruta h2 {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: 50%;
+  background-color: black;
+  opacity: 0.8;
+  transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
+  padding: 12px 5px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+}
+
+h2 span {
+  font-weight: 800;
+}
+
+figure.figuraruta figcaption::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity:0.5;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(110deg) translateY(-50%);
+}
+figure.figuraruta.rojo {
+  background-color: var(--figure-rojo);
+}
+figure.figuraruta.rojo h2 {
+  background-color: var(--fondo-h2-rojo);
+}
+
+figure.figuraruta.verde,
+figure.figuraruta.verde h2 {
+  background-color: var(--figure-verde);
+}
+
+figure.figuraruta.azul {
+  background-color: var(--figure-azul);
+}
+figure.figuraruta.azul h2{
+    background-color: var(--fondo-h2-azul);
+}
+
+figure.figuraruta.amarillo {
+  background-color: var(--figure-amarillo);
+}
+figure.figuraruta.amarillo h2{
+    background-color: var(--fondo-h2-amarillo);
+}
+
+figure.figuraruta.violeta ,
+figure.figuraruta.violeta h2{
+  background-color: var(--figure-violeta);
+}
+
+figure.figuraruta a {
+  position: absolute;
+  z-index: 1;
+}
+
+figure.figuraruta img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+figure.figuraruta  h2:hover {
+  transform: rotate(-10deg) translateX(-150%) translateY(-50%);
+  
+}
+figure.figuraruta figcaption:hover::before{
+    transform:  translateX(350%) ;
+    background-color: none;
+}
+
+
+.modos {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.76);
+  width: 100%;
+  margin: 2% 0%;
+  color: var(--color-enlaces);
+}
+
+.modos section {
+  display: flex;
+  flex-direction: column;
+}
+
+.modos h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: white;
+}
+
+.modos section img {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+}
+
+.modos section img:hover {
+  transform: scale(1.2);
+}
+
+.modos p{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.modos p:hover {
+  color: var(--color-head-foot-hover);
+}
+
+footer {
+    
+  display: flex;
+  justify-items: start;
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(220, 125, 29, 0.8);
+  font-size: 1.1vw;
+  color: var(--color-head-foot-hover);
+}

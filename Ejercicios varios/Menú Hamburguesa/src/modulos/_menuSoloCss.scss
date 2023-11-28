@@ -1,0 +1,70 @@
+@use "./general";
+@forward "./general";
+
+.cabecera {
+  .off-canva {
+    &__btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 999;
+      @include general.anchoAlto(3rem, 3rem);
+      cursor: pointer;
+      opacity: 0;
+
+      &:checked ~ .nav {
+        transform: translateX(0);
+        transition: 0.5s;
+      }
+
+      &:checked + .off-canvas__burger {
+        background-color: transparent;
+      }
+      &:checked + .off-canvas__burger::before {
+        transform: rotate(45deg);
+        background-color: general.$color-primario;
+      }
+      &:checked + .off-canvas__burger::after {
+        transform: rotate(-45deg) translate(0.4rem, -0.5rem);
+        background-color: general.$color-primario;
+      }
+    }
+
+    // creamos icono hamburguesa no label
+
+    &__burger {
+      position: fixed;
+      top: 5rem;
+      right: 1rem;
+      z-index: 998;
+      @include general.anchoAlto(3rem, 0.6rem);
+      background-color: general.$color-adicional;
+      border-radius: 0.3rem;
+      transform: rotate(0deg) translate(0, -1.2rem);
+      transition: transform 0.5s ease, background-color 0.5s ease;
+
+      @include general.respond-to("escritorio") {
+        &,
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        @include general.anchoAlto(100%, 0.6rem);
+        background-color: general.$color-adicional;
+        border-radius: 0.3rem;
+      }
+      &::before {
+        transform: rotate(0deg) translate(0, -0.9rem);
+      }
+      &::after {
+        transform: rotate(0deg) translate(0, 0.3rem);
+      }
+    }
+  }
+}
