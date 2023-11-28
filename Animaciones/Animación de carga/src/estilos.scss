@@ -1,0 +1,57 @@
+@mixin transformar($propiedad) {
+  -webkit-transform: $propiedad;
+  -moz-transform: $propiedad;
+  transform: $propiedad;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    .firweworks {
+        width: 300px;
+        height: 300px;
+        background: {
+            image: url("../fireworks.png") ;
+            size: cover;
+            
+        }
+        
+        animation: animacion 5s steps(95,end) infinite ;
+        
+    }
+}
+//  @mixin keyframe($nombre, $duracion...){
+
+    @keyframes animacion {
+        0%{
+            background-position: 0 0;
+        
+        }
+        100%{
+            background-position: 100% 0;
+        }
+        
+    }
+    @-moz-keyframes animacion {
+        0%{
+            background-position: 0 0;
+        
+        }
+        100%{
+            background-position: 100% 0;
+        }
+        
+    }
+    @-webkit-keyframes animacion {
+        0%{
+            background-position: 0 0;
+        
+        }
+        100%{
+            background-position: 100% 0;
+        }
+        
+    }

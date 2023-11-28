@@ -1,0 +1,58 @@
+:root{
+--big-tile-size:20vmin;
+--scale:0.4;
+--rotation: 270deg;
+--tile-size: calc(var(var(--big-tile-size) / 3));
+
+}
+
+body{
+    background-color: var(--surface-2);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+main {
+    width: 80%;
+    height: 60%;
+
+}
+
+ul{
+    list-style-type: none;
+    display: grid;
+    gap:1vmin;
+    grid-template: repeat(9,var(--tile-size)) / repeat(9, var(--tile-size));
+    position: fixed;
+    top:50%;
+    transform: translate(-50%, -50%) scale(var(--scale));
+
+}
+
+li{
+    max-inline-size: 100%; /** define tamaño max horizontal/vertical de elemento en base a modo escritura*/
+    border-radius: var(--radius-2);
+    background-color: hsl(0 0% 75% / 0.2);
+    position: relative;
+    padding: 0%;
+    animation: scale-up 1s both;
+
+}
+
+img{
+    --rotate: -270deg;
+    min-width: 200%;
+    height: 200%;
+    aspect-ratio: 1;
+    transform: rotate( -50% -50%);
+}
+
+@keyframes scale-up {
+    from{
+        transform: translateX(-50%) translateY(-50%) scale(--scale), rotate(0º);
+    }
+    to{
+        transform: translateX(-50%) translateY(-50%) scale(1), rotate(--rotation);
+    }
+}

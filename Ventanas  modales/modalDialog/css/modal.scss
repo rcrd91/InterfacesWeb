@@ -1,0 +1,44 @@
+@import ".../.../css/general";
+
+dialog {
+  max-width: 650px;
+  padding: 2.8rem 5rem;
+  border: 8px solid $colorPrimario;
+  background-color: #fafafa;
+  margin: 0 auto;
+  position: absolute;
+  top: calc(100% - 75%);
+  text-align: center;
+
+
+    $propiedades: apacecer 0.5s ease-in-out;
+    @include defAnimacion($propiedades);
+    
+    //chamamos ao mixin para xerar fotograma
+    @include keyframes("aparecer"){
+        @include animacionAparecer();
+    }
+
+  &::backdrop {
+    background-color: $colorSecundario;
+  }
+
+  h2 {
+    padding-bottom: 1rem;
+  }
+
+  p,
+  pre,
+  code {
+    text-align: left;
+  }
+
+  button{
+    box-shadow: 0 0 0 $colorPrimario; //box-shadow:none
+
+    &:hover{
+        box-shadow: 8px 8px 0 $colorPrimario;
+
+    }
+  }
+}

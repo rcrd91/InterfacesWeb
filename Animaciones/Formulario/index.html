@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles.css">
+    <script src="js/script.js" defer></script>
+    <title>Formulario accesible</title>
+</head>
+<body>
+    <h1>Formulario de datos</h1>
+    <form id="formulario">
+        <figure aria-label="Avatar de usuario">
+            <img src="../avatar.png" alt="Imagen de usuario en formato avatar" id="avatar">
+            
+        </figure>
+        <fieldset id="contenedor">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" pattern="[a-zA-Záéíóú\s]{2,12}" placeholder="Nombre" required>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" pattern="[a-zA-Záéíóú\s]{2,34}" placeholder="Apellidos" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" required>
+            <label for="nombre">Telefono</label>
+            <input type="number" name="telefono" id="telefono" pattern="[0-9]{3}[0-9]{6}" placeholder="Telefono">
+
+            <button type="submit" name="boton" id="boton">Guardar</button>
+            
+        </fieldset>
+    </form>
+</body>
+</html>

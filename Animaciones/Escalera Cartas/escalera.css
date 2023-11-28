@@ -1,0 +1,59 @@
+
+body{
+    background-color: #095145;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+div.contenedor{
+    display: grid;
+    grid-template-columns: repeat(15, 60px);
+    grid-template-rows: repeat(15, 60px);
+}
+
+.carta{
+    min-width: 180px;
+    background-image: url("./img/asart-naipes-dorso-minimalart.png");
+}
+
+#bastos{
+    grid-area: 1/1/9/7;
+}
+
+#copas{
+    grid-area : 3/4/12/10;
+}
+
+#espadas {
+    grid-area : 5/7/13/13;
+}
+
+#oros{
+    grid-area: 7/10/16/16;
+}
+#bastos:hover{
+   
+    background-image: url("./img/asart-naipes-bastos-1-minimalart.png");
+}
+
+#copas:hover{
+    background-image: url("./img/asart-naipes-copas-1-minimalart.png");
+}
+
+#espadas:hover{
+    background-image: url("./img/asart-naipes-espadas-1-minimalart.png");
+}
+#oros:hover{
+    background-image: url("./img/asart-naipes-oros-1-minimalart.png");
+}
+
+@keyframes girar {
+    
+    
+}
