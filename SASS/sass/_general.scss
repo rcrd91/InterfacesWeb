@@ -1,0 +1,74 @@
+//definimos variables
+
+$tam: 12px;
+$negro: #000;
+$blanco: #fff;
+$naranja: orange;
+$colorSass: #cf649a;
+$grisOscuro: rgb(19,18,18);
+$grisClaro: rgba(128,128,128, 0.288);
+$flex-columna: "column wrap";
+$flex-row: "row wrap";
+$centrado: center;
+$fuente: sans-serif;
+
+
+*, *::after, *::before{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+:root{
+    font: 14px/1.6 $fuente;
+}
+
+a{
+    text-decoration-color: $colorSass;
+    color:$colorSass;
+    cursor:pointer;
+    &:hover{
+        color:blue;
+    }
+    header & {
+        font-weight: 500;
+    }
+}
+
+svg {
+    max-width: 30px;
+    fill: $blanco;
+}
+
+@mixin encabezados($tam){
+    h1{
+        font-size: $tam;
+    }
+    h2{
+        font-size: $tam -0.2;
+    }
+    h3{
+        font-size: $tam -0.5;
+    }
+}
+
+@mixin flexCentrado($direccion){
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: $centrado;
+    align-content: $centrado;
+
+}
+
+%fondoCabeceraPie{
+    background-color: $negro;
+    width: 100%;
+    height: max-content;
+    padding: 10px;
+}
+
+%Estilos_titulos {
+    text-align: center;
+    color: $grisOscuro;
+    padding: 0 .5rem;
+}

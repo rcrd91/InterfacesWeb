@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+body{
+    background-color: black;
+
+    header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color:white;
+        nav{
+            width: 70%;
+            ul {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+ 
+                li img{
+                    width: 25px;
+                    height: 30px;
+                   
+                }
+                
+            }
+
+        }
+        
+    }
+
+    main{
+
+    width: 80%;
+
+        .slider{
+            position: absolute;
+            left: 35%;
+            top: 10%;
+            width: 50%;
+            height: 350px;
+
+            iframe{
+                width: 400px;
+                height: 320px;
+
+            }
+        }
+
+    }
+}

@@ -1,0 +1,66 @@
+@import "general";
+a {
+    text-decoration: none;
+    color: $colorSass;
+    cursor: pointer;
+    &:hover{
+        color: $naranja;
+    }
+}
+
+header{
+    //background-color: $negro;
+    @extend %fondoCabeceraPie;
+     display: flex;
+    // flex-flow: $flex-row; 
+    // justify-content: $centrado;
+    // align-content: $centrado;
+    @include flexCentrado(column);
+    h1{
+        //font-family: $fuente;
+
+        font: {
+            family: $fuente;
+            size: 3rem;
+        }
+        color: $blanco;
+        text-align: center;
+        +h2 {/*irmau directo*/
+            color: $colorSass;
+            font-size: 1.5rem;
+            text-align: $centrado;
+        }
+    }
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+
+    @include encabezados(3rem);
+    & * h2{
+        @extend %Estilos_titulos;
+    }
+    & * h3{
+        @extend %Estilos_titulos;
+    }
+
+    & * p{
+        padding: .25rem 0;
+    }
+    section {
+        padding: 1rem 0;
+        &:not(:first-of-type){
+            border-top: 1px solid $grisClaro;
+        }
+    }
+    
+}
+
+footer{
+    @extend %fondoCabeceraPie;
+
+    @include flexCentrado(row);
+    color: $blanco;
+}

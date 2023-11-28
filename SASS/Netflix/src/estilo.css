@@ -1,0 +1,35 @@
+body {
+  background-color: black;
+}
+body header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+body header nav {
+  width: 70%;
+}
+body header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+body header nav ul li img {
+  width: 25px;
+  height: 30px;
+}
+body main {
+  width: 80%;
+}
+body main .slider {
+  position: absolute;
+  left: 35%;
+  top: 10%;
+  width: 50%;
+  height: 350px;
+}
+body main .slider iframe {
+  width: 400px;
+  height: 320px;
+}/*# sourceMappingURL=estilo.css.map */
