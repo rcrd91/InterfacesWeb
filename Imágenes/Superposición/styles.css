@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Explora:wght@400;700&display=swap');
+* {
+    margin: 0 auto;
+        box-sizing: border-box;
+}
+
+:root {
+   
+    font-size: 12px;
+    line-height: 1.6;
+    font-family: "Explora";
+    --color-primario: #f5e8da;
+    --color-linea: #f5e8da73;
+}
+
+body {
+    background-color: black;
+    color: var(--color-primario);
+}
+
+.activa.active {
+    color:var(--color-linea);
+}
+header {
+    width: 100%;
+    display: flex;
+}
+
+.logo {
+    margin: 0;
+    align-self: flex-start;
+}
+
+h1 {
+    align-self: center;
+    letter-spacing: 8px;
+    margin: 0;
+    justify-content: center;
+}
+
+.menu-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.menu-principal ul{
+    list-style: none;
+}
+
+
+
+img {
+    max-width: 692px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1fr;
+}
+
+main .imagen:nth-child(1){
+    grid-column: 1/4;
+    grid-row: 1/4;
+}
+main .imagen:nth-child(2) {
+    grid-column: 3/7;
+    grid-row: 1/4;
+}
+main .imagen:nth-child(3) {
+    grid-column: 1/4;
+    grid-row: 3/7;
+}
+main .imagen:nth-child(5) {
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+main .imagen:nth-child(4) {
+    grid-column: 3/7;
+    grid-row: 3/7;
+}
