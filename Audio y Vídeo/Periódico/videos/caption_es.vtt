@@ -1,0 +1,37 @@
+WEBVTT
+
+Padre
+00:00.500 --> 00:01.500 line:5% align:middle
+<v padre>Todas son piedras muy grandes</v>
+
+Padre2
+00:02.500 --> 00:05.500 line:5% align:middle
+<v padre>Y bueno, toda la escalera está rota.</v>
+
+Narrador
+00:06.000 --> 00:09.000 line:10% align:middle
+<v narrador>Desde Alepo el padre Farid nos enseña
+como ha quedado su iglesia tras el terremoto</v>
+
+Narrador2
+00:10.000 --> 00:13.000 line:5% align:middle
+<v narrador> Él está a salvo, </v>
+<v narrador> pero en el interior <b>uno de sus compañeros</b>
+sigue desaparecido.</v>
+
+Narrador3
+00:31.000 --> 00:39.000 line:10% align:start position:10%
+<v narrador>A 700km de la zona más afectada, en Turquía, vive Ismael.
+Forma parte del grupo de entrenadores del Galatasaray.
+ <i>Y la noticia le ha impactado</i></v>
+
+Entrenador
+00:39.500 --> 00:46.000 line:70% align:middle
+<v entrenador> En Estambul no ha afectado directamente.
+Lo que si sé, por compañeros turcos, es que la <b>preocupación es grande</b></v>
+
+Fin
+01:20.000 --> 01:27.000 line:90% align:end vertical:rl position:90%
+<c.fin> Más noticias en nuestro canal 
+<b>http://elperiodico.es/directo</b></c>
+

@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+
+:root{
+    font-size: 14px;
+}
+/* ESTILOS PARA O AUDIO */
+
+.testimonio {
+    width: auto;
+    max-width: 800px;
+    max-height: 200px;
+    background-color: #ccc; 
+    border-radius: 20px;
+    box-shadow: 3px 3px 20px #ccc;
+    display: grid;
+    grid-template-columns: minmax(auto, 200px) 1fr;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.testimonio h3 {
+    font-size: 1.5rem;
+}
+
+.testimonio figure {
+    width: 100%;
+    min-height: 144px;
+    overflow: hidden;
+    border-radius: 20px;
+    height: auto;
+}
+
+.testimonio figure img {
+    width: 100% ;
+    height: auto;
+
+}
+
+audio, video {
+    box-shadow: 10px 15px 20px  rgb(44,43,43);
+    border-radius: 26px; 
+    margin: 1% auto;
+    width: 100%;
+}
+
+/* ESTILOS DOS SUBTITULOS */
+
+::cue{
+    background-color: rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 2px black;
+    color: orange;
+    font: 1.5rem sans serif;
+}
+
+::cue(v[voice=padre]){
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font: 1.4rem;
+}
+
+::cue(v[voice=narrador]){
+    font-family: Verdana;
+    font-size: 1.5rem;
+}
+
+::cue(v[voice=entrenador]){
+    font-family: Cambria;
+    color:yellow;
+    font-size: 1.6rem;
+}
+
+::cue(.fin){
+    font-size: 2rem;
+    font-family: sans serif;
+    color: brown;
+    background-color: rgba(255,255,255,0.5);
+}
