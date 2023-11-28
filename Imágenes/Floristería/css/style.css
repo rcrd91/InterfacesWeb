@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+
+:root {
+  --main-letra-color:#415840;
+  --main-letra-dark-color: black;
+  --main-fondo-color: #ebe2e5;
+  --menu-fondo-color: #f3c5d9;
+  --page-fondo-color: #feffff;
+  font: 16px/1.5 "Dosis", sans-serif;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body>* {
+  padding: 20px;
+}
+
+
+/*********** cabecera **********/
+
+.cabecera{
+  display: flex;
+  justify-content: space-between;
+  
+}
+nav{
+  display: flex;
+  order:1;
+  justify-content: space-between;  
+  font-size: 1.5rem;
+}
+
+nav ul{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  
+}
+.cta-contact{
+  order:2;
+  
+}
+
+
+/********** contenido principal de la página ***********/
+
+main{
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  
+  background-image: url("../img/fondo.jpg");
+  background-repeat: no-repeat;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  
+
+}
+.textoCentro{
+  text-align: center;
+}
+
+
+/******* galeria ****/
+
+
+/***** estilo de la tienda *****/
+
+/********* pie ********/
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+.accesibilidad {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+footer ul{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+}
+
+/****** Media Queries ************/
+
